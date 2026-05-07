@@ -124,20 +124,21 @@ function App() {
           <>
             <header className="header-top">
               <div>
-                <h1>Welcome back, {data.usuario}!</h1>
+                <h1>Olá, {data.usuario}!</h1>
 
                 <p>{currentTime}</p>
 
                 {weather && (
                   <div className="weather-info">
                     <img
-                      src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
-                      alt="Ícone do clima"
+                      className="weather-icon"
+                      src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png`}
+                      alt={weather.weather[0].description}
                     />
 
                     <div>
                       <p>
-                        {weather.main.temp}°C -{weather.weather[0].description}
+                        {weather.main.temp}°C - {weather.weather[0].description}
                       </p>
 
                       <p>{weather.name}</p>

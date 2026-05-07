@@ -38,7 +38,7 @@ const Sidebar = ({ telaAtiva, setTelaAtiva }) => {
       {isOpen && <div className="sidebar-overlay" onClick={toggleMenu}></div>}
 
       <aside className={`sidebar ${isOpen ? "open" : ""}`}>
-        <div className="logo">FinSet</div>
+        <div className="logo">MOONEY</div>
 
         <nav>
           <button
@@ -50,21 +50,21 @@ const Sidebar = ({ telaAtiva, setTelaAtiva }) => {
           </button>
 
           <button
-            className={`nav-btn ${telaAtiva === "schedule" ? "active" : ""}`}
-            onClick={() => navigate("schedule")}
+            className={`nav-btn ${telaAtiva === "Agenda" ? "active" : ""}`}
+            onClick={() => navigate("Agenda")}
           >
             <Calendar size={20} />
-            Schedule
+            Agenda
           </button>
 
           <button className="nav-btn" onClick={() => setIsOpen(false)}>
             <ReceiptText size={20} />
-            Transactions
+            Transações
           </button>
 
           <button className="nav-btn" onClick={() => setIsOpen(false)}>
             <Wallet2 size={20} />
-            Wallet
+            Carteira
           </button>
 
           <button className="nav-btn" onClick={() => setIsOpen(false)}>
@@ -76,12 +76,12 @@ const Sidebar = ({ telaAtiva, setTelaAtiva }) => {
         <div className="sidebar-footer">
           <button className="nav-btn">
             <Settings size={20} />
-            Settings
+            Configurações
           </button>
 
           <button className="nav-btn">
             <LogOut size={20} />
-            Log out
+            Sair
           </button>
         </div>
       </aside>
