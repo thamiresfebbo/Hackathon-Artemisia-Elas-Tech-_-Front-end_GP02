@@ -1,0 +1,30 @@
+{
+  "usuario": "Illana",
+  "saldo": 15700,
+  "renda": 8500,
+  "gastos": 6222,
+  "transacoes": [
+    {
+      "id": 1,
+      "data": "05 Mai",
+      "nome": "YouTube",
+      "valor": -29.9,
+      "categoria": "Assinatura"
+    },
+    {
+      "id": 2,
+      "data": "05 Mai",
+      "nome": "Mercado",
+      "valor": -450.0,
+      "categoria": "Alimentação"
+    },
+    {
+      "id": 3,
+      "data": "05 Mai",
+      "nome": "Freelance",
+      "valor": 1200,
+      "categoria": "Renda"
+    }
+  ],
+  "contexto": { "clima": "Chuvoso", "evento": "Hackathon" }
+}
