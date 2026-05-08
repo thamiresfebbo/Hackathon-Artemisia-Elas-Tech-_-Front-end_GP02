@@ -17,7 +17,7 @@ import {
 import dataJson from "./data.json";
 
 function App() {
-  const API_KEY = "7c952777d53341ffb639e8be39b888c0";
+  const API_KEY = "c558fd56b06144789697d600235f9e38";
 
   // =========================
   // STATES
