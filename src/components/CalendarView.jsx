@@ -43,7 +43,7 @@ export default function CalendarView({ usuario, onAddTransacao, transacoes }) {
     <div className="calendar-view">
       <header className="header-top">
         <div>
-          <h1>Olá, {usuario}</h1>
+          <h1>Olá, {usuario}!</h1>
           <p className="saudacao-header">Planeje seus gastos por dia</p>
         </div>
       </header>
