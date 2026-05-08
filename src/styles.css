@@ -3,33 +3,31 @@
   margin: 0;
   padding: 0;
 }
-
+.logo {
+  width: 40%;
+  height: auto;
+  padding: 0.5rem 0;
+  display: block;
+  margin: 0 auto;
+}
 .app-container {
   display: flex;
   min-height: 100vh;
-  background-color: #f8f9fe;
+  background-color: #1d1521;
   font-family: "Inter", sans-serif;
 }
 
 /* Sidebar */
 .sidebar {
   width: 16.25rem;
-  background: white;
+  background: #372b40;
   padding: 1.875rem 1.25rem;
   display: flex;
   flex-direction: column;
-  border-right: 0.0625rem solid #eaeaea;
+  border-right: 0.0625rem solid #0d0d0d;
   position: sticky;
   top: 0;
   height: 100vh;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: 800;
-  margin-bottom: 2.5rem;
-  color: #1a1d1f;
-  padding-left: 0.625rem;
 }
 
 .nav-btn {
@@ -46,23 +44,23 @@
   align-items: center;
   gap: 0.75rem;
 
-  color: #6f767e;
+  color: #f0f0f0;
   font-weight: 600;
   transition: 0.3s;
 }
 
 .nav-btn:hover {
-  background: #f4f4f4;
+  background: #17141b;
 }
 
 .nav-btn.active {
-  background: #7b61ff;
-  color: white;
+  background: #f2daac;
+  color: rgb(24, 24, 24);
 }
 
 .sidebar-footer {
   margin-top: auto;
-  border-top: 0.0625rem solid #eee;
+  border-top: 0.0625rem solid #17141b;
   padding-top: 1.25rem;
 }
 
@@ -71,32 +69,18 @@
   flex: 1;
   padding: 2.5rem;
 }
+.saudacao-header {
+  color: #f2ca99;
+}
 
 .header-top {
+  color: #d5dff2;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.875rem;
 }
 
-.avatar {
-  width: 2.5rem;
-  height: 2.5rem;
-  background: #d1c9ff;
-  border-radius: 50%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-weight: bold;
-}
-
-.user-profile {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-}
 /* Clima Personalizado*/
 .weather-info {
   display: flex;
@@ -105,11 +89,12 @@
 
   margin-top: 0.75rem;
 }
-
+.weather-info p {
+  color: #f2ca99;
+}
 .weather-icon {
   width: 4rem;
   height: 4rem;
-
   object-fit: contain;
 }
 
@@ -122,7 +107,34 @@
   font-size: 0.875rem;
   color: #6f767e;
 }
+.extrato {
+  margin-top: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+}
 
+.extrato h2 {
+  margin-bottom: 10px;
+}
+
+.extrato ul {
+  list-style: none;
+  padding: 0;
+}
+
+.extrato-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #17141b;
+}
+
+.extrato-item small {
+  display: block;
+  color: gray;
+  font-size: 12px;
+}
 /* Cards */
 .cards-grid {
   display: grid;
@@ -142,21 +154,6 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.9375rem;
-}
-
-/* Banner */
-.insight-banner {
-  background: #7b61ff;
-  color: white;
-
-  padding: 1.125rem 1.5625rem;
-  border-radius: 1rem;
-
-  display: flex;
-  align-items: center;
-  gap: 0.9375rem;
-
-  margin-bottom: 1.875rem;
 }
 
 /* Footer */
@@ -208,6 +205,7 @@
   font-family: "Inter", sans-serif;
 }
 
+/* Navegação */
 .react-calendar__navigation {
   display: flex;
   height: 3.125rem;
@@ -224,25 +222,22 @@
   cursor: pointer;
 }
 
+/* Dias da semana */
 .react-calendar__month-view__weekdays {
   display: grid !important;
   grid-template-columns: repeat(7, 1fr);
-
   text-align: center;
-
-  text-transform: capitalize;
   font-weight: 600;
   color: #6f767e;
-
   font-size: 1rem;
   padding-bottom: 0.9375rem;
-  width: 100%;
 }
 
 .react-calendar__month-view__weekdays__weekday abbr {
   text-decoration: none;
 }
 
+/* Dias */
 .react-calendar__month-view__days {
   display: grid !important;
   grid-template-columns: repeat(7, 1fr);
@@ -251,15 +246,11 @@
 
 .react-calendar__tile {
   background: white !important;
-  border: 0.0625rem solid #f0f0f0 !important;
+  border: 0.0625rem solid #17141b !important;
   border-radius: 0.5rem !important;
 
   aspect-ratio: 1 / 1;
   padding: 0.875rem !important;
-
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
 
   font-weight: 600;
   color: #1a1d1f;
@@ -268,23 +259,22 @@
 }
 
 .react-calendar__tile:enabled:hover {
-  background: #f8f9fe !important;
-  border-color: #7b61ff !important;
+  background: #f6e4b7 !important;
+  border-color: #372b40 !important;
 }
 
 .react-calendar__tile--active {
-  background: white !important;
-  border: 0.125rem solid #7b61ff !important;
-  color: #7b61ff !important;
+  border: 0.125rem solid #372b40 !important;
+  color: #372B409 !important;
+}
+
+.react-calendar__tile--now {
+  background: #f6e4b7 !important;
+  color: #372b40 !important;
 }
 
 .react-calendar__month-view__days__day--neighboringMonth {
   opacity: 0.3;
-}
-
-.react-calendar__tile--now {
-  background: #f0edff !important;
-  color: #7b61ff !important;
 }
 
 /* Eventos */
@@ -306,6 +296,71 @@
   background: #fff9e5;
   color: #f57f17;
 }
+/*transacao*/
+
+.transaction-form {
+  background: #fff;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  width: 100%; /* ❗ remove width fixa */
+  max-width: 100%;
+  margin-top: 1.5rem;
+
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+}
+
+.transaction-form input,
+.transaction-form select {
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  transition: 0.2s;
+}
+.transaction-form input:focus,
+.transaction-form select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+.transaction-form button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #6366f1;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.transaction-form button:hover {
+  background: #4f46e5;
+}
+
+.extrato-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.extrato-item:hover {
+  background: #f9fafb;
+}
+
+.extrato-item button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
 
 /* Menu Mobile */
 .menu-mobile-toggle {
@@ -317,7 +372,7 @@
 
   z-index: 1000;
 
-  background: #7b61ff;
+  background: #d7c437;
   color: white;
 
   border: none;
@@ -340,9 +395,11 @@
 }
 .calendar-main-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 1.5rem;
+  grid-template-columns: minmax(0, 2fr) 20rem;
+  gap: 1rem;
   align-items: start;
+
+  max-width: 75rem;
 }
 
 /* Card do calendário - Minha Agenda*/
@@ -350,9 +407,11 @@
   background: white;
   padding: 1.5rem;
   border-radius: 1.25rem;
-  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.02);
+  box-shadow: 0 0rem 0.75rem rgba(0, 0, 0, 0.02);
+
   width: 100%;
-  max-width: 35rem;
+  max-width: 30rem;
+  min-width: 0;
 }
 
 /* Sidebar direita */
@@ -360,24 +419,8 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-}
 
-/* Cards de lembrete */
-.reminder-card {
-  background: white;
-  padding: 1.25rem;
-  border-radius: 1rem;
-  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.02);
-}
-
-.reminder-card h4 {
-  margin-bottom: 0.75rem;
-  color: #7b61ff;
-}
-
-.reminder-card p {
-  margin-bottom: 0.5rem;
-  color: #1a1d1f;
+  margin-left: 0;
 }
 
 /* Topo do calendário */
@@ -387,27 +430,6 @@
   justify-content: space-between;
 
   margin-bottom: 1.5rem;
-}
-
-/* Botão */
-.btn-add-event,
-.reschedule-btn {
-  background: #7b61ff;
-  color: white;
-
-  border: none;
-  border-radius: 0.75rem;
-
-  padding: 0.75rem 1rem;
-
-  cursor: pointer;
-  font-weight: 600;
-
-  transition: 0.2s;
-}
-.btn-add-event:hover,
-.reschedule-btn:hover {
-  background: #211457;
 }
 
 /* Responsividade */
@@ -452,7 +474,7 @@
     padding-inline: 1rem;
   }
   .calendar-main-grid {
-    grid-template-columns: fr;
+    grid-template-columns: 1fr;
   }
   .react-calendar {
     width: 100% !important;

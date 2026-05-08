@@ -1,9 +1,7 @@
 import React, { useState } from "react";
+import logo from "../assets/icons8-money-box-64.png";
 import {
   LayoutDashboard,
-  ReceiptText,
-  Wallet2,
-  PieChart,
   Settings,
   LogOut,
   Calendar,
@@ -12,12 +10,12 @@ import {
 } from "lucide-react";
 
 const Sidebar = ({ telaAtiva, setTelaAtiva }) => {
-  // Estado para controlar se o menu está aberto no mobile
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
-  // Função para mudar de tela e fechar o menu automaticamente
   const navigate = (tela) => {
     setTelaAtiva(tela);
     setIsOpen(false);
@@ -25,7 +23,7 @@ const Sidebar = ({ telaAtiva, setTelaAtiva }) => {
 
   return (
     <>
-      {/* Botão Hambúrguer: aparece apenas via CSS Media Query no mobile */}
+      {/* Botão menu mobile */}
       <button
         className="menu-mobile-toggle"
         onClick={toggleMenu}
@@ -34,13 +32,15 @@ const Sidebar = ({ telaAtiva, setTelaAtiva }) => {
         {isOpen ? <X size={28} /> : <Menu size={28} />}
       </button>
 
-      {/* Overlay: escurece o fundo ao abrir o menu no mobile */}
+      {/* Overlay */}
       {isOpen && <div className="sidebar-overlay" onClick={toggleMenu}></div>}
 
+      {/* Sidebar */}
       <aside className={`sidebar ${isOpen ? "open" : ""}`}>
-        <div className="logo">MOONEY</div>
+        <img src={logo} alt="Logo" className="logo" />
 
         <nav>
+          {/* Dashboard */}
           <button
             className={`nav-btn ${telaAtiva === "dashboard" ? "active" : ""}`}
             onClick={() => navigate("dashboard")}
@@ -49,6 +49,7 @@ const Sidebar = ({ telaAtiva, setTelaAtiva }) => {
             Dashboard
           </button>
 
+          {/* Agenda */}
           <button
             className={`nav-btn ${telaAtiva === "Agenda" ? "active" : ""}`}
             onClick={() => navigate("Agenda")}
@@ -56,23 +57,9 @@ const Sidebar = ({ telaAtiva, setTelaAtiva }) => {
             <Calendar size={20} />
             Agenda
           </button>
-
-          <button className="nav-btn" onClick={() => setIsOpen(false)}>
-            <ReceiptText size={20} />
-            Transações
-          </button>
-
-          <button className="nav-btn" onClick={() => setIsOpen(false)}>
-            <Wallet2 size={20} />
-            Carteira
-          </button>
-
-          <button className="nav-btn" onClick={() => setIsOpen(false)}>
-            <PieChart size={20} />
-            Analytics
-          </button>
         </nav>
 
+        {/* Footer */}
         <div className="sidebar-footer">
           <button className="nav-btn">
             <Settings size={20} />
