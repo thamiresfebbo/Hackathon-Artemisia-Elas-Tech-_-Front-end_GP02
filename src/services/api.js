@@ -1,5 +1,6 @@
 const BASE_URL =
-  "https://crudcrud.com/api/7c952777d53341ffb639e8be39b888c0";
+  "https://crudcrud.com/api/7c952777d53341ffb639e8be39b888c0/transactions";
+
 // =========================
 // LISTAR TRANSAÇÕES
 // =========================
